@@ -1,0 +1,78 @@
+/* Estilos para la galería de amor */
+
+/* Fondo de la página */
+body {
+	background-color: #fdfdce;
+  }
+  
+  /* Contenedor principal de la galería */
+  .gallery-container {
+	max-width: 800px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+  }
+  
+  /* Estilos para las imágenes */
+  img {
+	border: 2px solid black;
+	object-fit: cover;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+  }
+  
+  /* Estilos para el título de la página */
+  .page-title {
+	text-align: center;
+	font-size: 2rem;
+	margin: 30px 0;
+  }
+  
+  /* Estilos para la animación del fondo */
+  @keyframes colorChange {
+	0% {
+	  background-color: #f7cac9;
+	}
+	16.66% {
+	  background-color: #92a8d1;
+	}
+	33.33% {
+	  background-color: #f7cac9;
+	}
+	50% {
+	  background-color: #d4a5a5;
+	}
+	66.66% {
+	  background-color: #c7f7ca;
+	}
+	83.33% {
+	  background-color: #b19cd9;
+	}
+	100% {
+	  background-color: #f7cac9;
+	}
+  }
+  
+  /* Cambiar el color de fondo de la página */
+  body {
+	animation-name: colorChange;
+	animation-duration: 10s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+  }
+  
+  /* Ajustar el tamaño de la página para dispositivos móviles */
+  @media screen and (max-width: 600px) {
+	.gallery-container {
+	  grid-template-columns: 1fr;
+	  margin: 0 5%;
+	}
+	
+	img {
+	  max-width: 100%;
+	  max-height: 100%;
+	}
+  }
+  
